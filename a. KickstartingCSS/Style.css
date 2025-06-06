@@ -1,0 +1,49 @@
+* {
+    /* this is universal selector and it selects all the html tags.*/
+}
+
+body{
+    /* This is type selector and it selects only the specified html tag */
+    background-color: #f3f2ef;
+}
+
+header{
+    background-color: white;
+}
+
+.mid-text{
+    /* This is class selector and it selects all the html elements who has the same class name as mentioned in the selector. */
+    font-weight: bolder;
+    font-size: large;
+}
+
+#head-text{
+    /* This is id selector and it selects only the first one html tag who has the same id name as mentioned in the selector. */
+    font-size: 50px;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+}
+
+input[disabled]{
+    background-color: beige;
+}
+
+div span{
+    color:cadetblue;
+}
+
+h2 ~ h3{
+    color:brown;
+}
+
+a:hover{
+    /*this is pseudo class selector*/
+    text-decoration: none;
+}
+div::before{
+    /* this is pseudo element selector */
+    content: '...';
+}
+div::after{
+    content: '...';
+}

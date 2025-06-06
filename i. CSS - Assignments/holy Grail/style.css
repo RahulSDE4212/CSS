@@ -1,0 +1,53 @@
+html{
+    box-sizing: border-box;
+}
+
+*,*::after,*::before{
+    box-sizing: inherit;
+}
+
+.holygrail{
+    display: flex;
+    flex-direction: column;
+    border: solid 5px black;
+    width: 1500px;
+    height: 740px;
+}
+
+.header{
+    background-color: red;
+    /* height: 60px; */
+    text-align: center;
+    flex-grow: 1;
+}
+
+.mainarea{
+    display: flex;
+    flex-direction: row;
+    height: 580px;
+    justify-content:space-between;
+    text-align: center;
+    
+}
+
+.navigation{
+    background-color: #f04e13;
+    width: 300px;
+}
+
+.ad{
+    background-color: #f27d07;
+    width: 300px;
+}
+
+.content{
+    background-color: #e0c089;
+    flex-grow: 1;
+    padding: 100px;
+}
+.footer{
+    background-color: red;
+    /* height: 60px; */
+    text-align: center;
+    flex-grow: 1;
+}

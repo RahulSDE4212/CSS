@@ -1,0 +1,110 @@
+html{
+    box-sizing: border-box;
+}
+*, *::after,*::before{
+    box-sizing: border-box;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* arrange the flex-items on cross-axis */
+}
+.static{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    border-radius: 50px;
+}
+.moving{
+    width: 50px;
+    height: 50px;
+    border: 5px solid red;
+    /* border-top: none; */
+    background-color: blue;
+    border-radius: 25px;
+    animation-name: rotator;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+    animation-timing-function: ease-out;
+}
+@keyframes rotator{  /* animation */
+    /* from {
+        transform: rotate(0);
+        background-color: blue;
+    }
+    to {
+        transform: rotate(180deg);
+        background-color: red;
+    } */
+
+    0% {
+        transform: translateX(-500px);
+        /* transform: rotate(0);
+        background-color: blue; */
+    }
+    50% {
+        /* background-color: green; */
+        transform: translateX(500px);
+    }
+    100% {
+        transform: translateX(-500px);
+        /* transform: rotate(180deg);
+        background-color: red; */
+    }
+}
+.moving:hover{
+    transform: rotate(180deg);
+    background-color: red;
+    /* margin-left: 2000px; */
+    /* transition-delay: 1s; /* start making the state change after 1s. */
+    transition-duration: 5s; /* take 5s after the start to move to the final state. */
+    transition-property: all;
+    transition-timing-function: ease-out; */
+    /* transition: all 5s ease-out 2s; */
+    /* animation-name: rotator;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+    animation-timing-function: ease-out; */
+}
+
+/*
+    * In Css, we can apply animations using three techniques.
+        1. Transforms    -> This capabilities of css helps us to move, rotate, resize our html elements.
+        2. Transitions.
+        3. KeyFrame
+
+----Transform *********************
+        -> Transform is the capabilites of css which help us to move, rotate, resize our html elements.
+        -> There are different properties/attributes of "Transform"
+            1. Transform: TranslateX(1px).
+                -> this will move the selected html element by 1pixel in the x-direction from its normal positon.
+            2. Transform: TanslateY(1px).  
+                -> this will move the selected html element by 1pixel in the y-direction from its normal positon.
+            3. Transform: Translate(1px,3px) 
+                -> this will move the selected html element in x-direction as well as y-direction by 1 pixel and 3 pixels.
+            4. Transform: rotate(2deg)    
+                -> this will move the selected html element in clockwise direction by 2 degree.
+            5. Transform: scaleX(2).
+                -> ye selected html element ko x-axis me expand kar dega by 2times of original size.
+            6. Transform: scaleY(2).
+                -> ye selected html element ko y-axis me expand kar dega by 2times of original size.
+            7. Transform: scale(2,3).
+                -> ye selected html element ki x-axis and y-axis me expand karega by 2 times and 3 times of its original size.
+            8. Transform: skew(2deg).
+                -> mano html element ko both end se 2 degree pe pull kar dia gya hai.
+
+----Transition **********************
+        -> there are different properties associated with transition.
+            1. Transition-delay: 5s.
+                -> what this is going to do is that 5s ka delay hoga selected html element ke 1 state ko dusre state me transform karne
+                   ke liye.
+                -> this says that start making  the state change after 5s.
+            2. Transition-duration: 5s.
+                -> ye kahta hai ki state change karne me 5 seconds lo.
+            3. Transition-propert: width;
+            4. Tansition-timing-function: ease-out;
+                -> the transition will start fast and will keep slowing later on.
+            5. keyframe.
+                -> keyframe is going to help us in changing animation from one animation to another animation.
+                -> transition happens once animation you can decide how many times animation should happen.
+*/          

@@ -1,0 +1,44 @@
+html{
+    box-sizing: border-box;
+}
+*, *::after, *::before{
+    box-sizing: inherit;
+}
+
+.parent{
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.parent > div{
+    width: 100px;
+    height: 100px;
+}
+#child2 {
+    border: solid 50px red;
+    border-radius: 5px;
+    animation: chalu 10s linear 0s infinite;
+    /* transform: translateX(500px); */
+    /* transform: scale(1.5,0.5); */
+    /* transform: rotate(45deg); */
+    /* transform: skew(20deg); */
+}
+
+@keyframes chalu {
+    0% {
+        transform: translateX(0);
+    }
+    50%{
+        transform: translateX(-500px);
+    }
+    75%{
+        transform: translateX(500px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+    
+}

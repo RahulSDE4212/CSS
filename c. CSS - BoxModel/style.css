@@ -1,0 +1,32 @@
+html{
+    /* every element of the html doc will be following border-box box-sizing which says that whatever width will be provided to you 
+       will be distributed to the actual content + padding + border.*/
+    box-sizing: border-box;
+}
+*, *:before, *:after{
+    /* here we are using before and after which is a pseudo class. */
+    /* inherit says that whatever will be the box-sizing of the parent will be inherited by the child also. */
+    box-sizing: inherit;
+}
+#demo {
+    width: 200px;
+    border: solid red 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    /* border-style: dotted;
+    border-color: red;
+    border-width: 5px; */
+}
+
+#demo2{
+    width: 200px;
+    border: solid red 5px;
+    padding: 10px;
+    box-sizing: content-box;
+
+}
+#demo3{
+    border: solid blue 15px;
+    /* width: 100%; */  /* 100% says that whatever will be the width of the parent element will be inherited by the child element. */
+    width: 150px;
+}

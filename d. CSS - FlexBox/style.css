@@ -1,0 +1,57 @@
+html{
+    box-sizing: border-box;
+}
+*, *:before,*:after{
+    box-sizing: inherit;
+}
+#parent{
+    /* flex-container */
+    border: solid red 10px;
+    display: flex;
+    height: 500px;
+    /* flex-direction: row;
+    flex-wrap: wrap; */
+    /* if you want to give the flex-direction as well as flex-wrap together then there is an attribute called as "flex-fow" */
+    flex-flow: row nowrap;
+    /* max-width: 1100px; */
+    justify-content: row wrap; /* to arrange element on main axis. */
+    align-items: normal; /* to arrange elements on cross axis. */
+    align-content: start; /* to arrange elements on cross axis. */
+    
+}
+#parent div{
+    /* flex-items */
+    border: solid blue 2px;
+    padding: 20px;
+    background-color: bisque;
+    min-width: 100px;
+    max-width: 200px;
+    max-height: 100px;
+}
+#child1{
+    /* flex-basis: 100%; used to play with spacing */
+    flex-grow: 1;
+}
+
+/* display attribute is used to apply the styling technique in the html document. 
+        -> flex is one of the technique
+
+************WHAT IS FLEX-BOX****************:
+    -> flex is an arrangement technique used to arrange the html element.
+    -> the parent element is called "flex-container".
+    -> the container is the html element that will wrap the item inside.
+    -> the child element is called "flex-items".
+    -> the flex-items are the actual elements that we are going to arrange.
+    -> by default the flex-items is arranged in a single row.
+        but we can change using using an attribute called as "flex-direction"
+    -> i.e. if "flex-direction:column" then the flex items will be arraned in a single column.
+    -> in order to get hang on how flex-box works there is an interesting game on internet called
+       as "flexbox froggy". 
+    
+***********WHAT IS AXIS IN THE FLEX-DIRECTION
+    * there are two types of axis in the flex-direction 
+        1) main axis.
+            -> whatever will be the direction of flex-direction will be the direction of main axis.
+        2) cross axis.
+            -> whatever will be the perpendicular direction of main axis will be the direction of cross axis.
+*/

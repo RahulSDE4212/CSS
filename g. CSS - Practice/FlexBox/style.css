@@ -1,0 +1,59 @@
+html{
+    box-sizing: border-box;
+}
+
+*,*::after,*::before{
+    box-sizing: inherit;
+}
+
+.parent{
+    width: 1000px;
+    height: 500px;
+    /* height: 500px; */
+    border: solid 5px red;
+    display: flex;
+    /* flex-direction: row; */
+    /* flex-flow: row wrap; */
+    /* align-content: space-evenly; */
+    /* flex-direction: row-reverse; */
+    /* flex-direction: column; */
+    /* flex-direction: column-reverse; */
+    /* flex-wrap: nowrap; */
+    /* flex-wrap: nowrap; */
+    /* justify-content: flex-start; */
+    /* justify-content: flex-end; */
+    /* justify-content: center; */
+    justify-content: space-between;
+    /* justify-content: space-around; */
+    /* justify-content: space-evenly; */
+    /* align-items: flex-start; */
+    /* align-items: flex-end; */
+    /* align-items: center; */
+    /* align-items: stretch; */
+    /* align-items: baseline; */
+}
+
+.parent > div{
+    border: solid 2px blue;
+    /* width: 300px; */
+    /* height: 50px; */
+}
+
+#child1{
+    /* flex-grow: 1; */
+    /* flex-shrink: 1; */
+    align-self: flex-start;
+}
+
+#child2{
+    /* flex-grow: 2; */
+    /* flex-shrink: 2; */
+    /* flex-shrink: 5; */
+    /* flex-basis: 50%; */
+}
+
+#child3{
+    /* flex-grow: 3; */
+    /* flex-shrink: 3; */
+}
+

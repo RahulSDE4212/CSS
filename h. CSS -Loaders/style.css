@@ -1,0 +1,195 @@
+html{
+    box-sizing: border-box;
+}
+
+*,*::before,*::after{
+    box-sizing: inherit;
+}
+
+.spacer{
+    height: 128px;
+}
+.loader1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+    /* background-color: #f0eeeb; */
+}
+
+.loader1 > div{
+    border: 5px solid red;
+    width: 4rem;
+    height: 4rem;
+    border-top: 5px solid #f0eeeb;
+    border-radius: 50%;
+    animation: spinner1 3s linear infinite;
+    /* animation-direction: reverse; */
+    animation-direction: alternate;
+}
+
+@keyframes spinner1{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(180deg);
+    }
+}
+
+.loader2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+}
+.loader2 > div{
+    border: 5px solid red;
+    width: 4rem;
+    height: 4rem;
+    border-top: 5px solid #f0eeeb;
+    border-bottom: 5px solid #f0eeeb;
+    border-radius: 50%;
+    animation: spinner2 3s linear infinite;
+    /* animation-direction: reverse; */
+    /* animation-direction: alternate; */
+}
+
+@keyframes spinner2{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(180deg);
+    }
+}
+
+.loader3 .first{
+    animation: expander 1s linear infinite;
+}
+
+.loader3 .second{
+    animation: expander 1s linear infinite;
+    animation-delay: 1s;
+}
+
+.loader3 .third{
+    animation: expander 1s linear infinite;
+    animation-delay: 2s;
+}
+
+@keyframes expander {
+    0%{
+        height: 100px;
+    }
+    50%{
+        height: 150px;
+    }
+    100%{
+        height: 100px;
+    }
+}
+
+.loader3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    height: 5rem;
+    /* background-color: #f0eeeb; */
+}
+.loader3 div{
+    background-color: red;
+    height: 100px;
+    width: 30px;
+}
+
+.loader4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+}
+
+
+.loader4 > div {
+    width: 2rem;
+    height: 2rem;
+    border: 5px solid grey;
+    border-radius: 50%;
+    animation: drop 1s ease-out infinite;
+}
+
+@keyframes drop{
+    0%{
+        width: 1rem;
+        height: 1rem;
+        border-color: grey;
+        opacity: 1;
+    }
+
+    15%{
+        opacity: 0;
+    }
+
+    25%{
+        width: 1.5rem;
+        height: 1.5rem;
+        border-color:#e8e6e3;
+        opacity: 1;
+    }
+
+    35%{
+        opacity: 0;
+    }
+
+    50% {
+        width: 1.8rem;
+        height: 1.8rem;
+        border-color: #f7f6f5;
+        opacity: 1;
+    }
+
+    53%{
+        width: 1.3rem;
+        height: 1.3rem;
+        border-color: #f7f6f5;
+        opacity: 1;
+    }
+
+    54%{
+        opacity: 0;
+    }
+
+    65%{
+        opacity: 0;
+    }
+
+    75%{
+        width: 2.2rem;
+        height: 2.2rem;
+        border-color: #fcfbfa;
+        opacity: 1;
+    }
+
+    79%{
+        width: 2.2rem;
+        height: 2.2rem;
+        border-color: #fcfbfa;
+        opacity: 1;
+    }
+
+    80%{
+        opacity: 0;
+    }
+    85%{
+        opacity: 0;
+    }
+
+    100%{
+        width: 1rem;
+        height: 1rem;
+        border-color: grey;
+        opacity: 1;
+    }
+}
